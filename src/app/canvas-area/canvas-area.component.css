@@ -38,7 +38,7 @@ root {
 }
 
 .canvas-boundary {
-  min-height: 600px;
+  min-height: calc(100vh - 70px);
   max-width: 100%;
   border: dotted #ccc 2px;
 }

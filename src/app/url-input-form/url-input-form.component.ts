@@ -14,7 +14,6 @@ export class UrlInputFormComponent {
   constructor(private AssetsStoreService: AssetsStoreService){}
 
   public addAsset(){
-    console.log(this.assetUrl);
     this.AssetsStoreService.addAsset(this.assetUrl.value);
   }
 }
