@@ -1,6 +1,23 @@
-<video width="100%" controls>
-  <source [src]="asset" type="video/mp4"/>
-</video>
+<div>
+  <video #videoElement *ngIf="isVideoUrl()" width="100%" controls>
+    <source [src]="asset" type="video/mp4"/>
+  </video>
+  <picture  *ngIf="!isVideoUrl()">
+    <img #imageElement style="width: 100%" [src]="asset" alt="no-image"/>
+  </picture>
+</div>
+<div *ngIf="assetDimensions">
+  <div style="display: flex; gap: 5px">
+    Position:
+    <span>(x: {{assetDimensions.x }};</span>
+    <span>y: {{assetDimensions.y}})</span>
+  </div>
+  <div style="display: flex; gap: 10px">
+    <span>Width: {{assetDimensions.width}};</span>
+    <span>Height: {{assetDimensions.height}}</span>
+  </div>
+</div>
+
 
 
 

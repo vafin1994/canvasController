@@ -5,9 +5,9 @@ import {Injectable} from '@angular/core';
 })
 export class AssetsStoreService {
 
-  private assets: string[] = ['https://s3.us-east-2.amazonaws.com/vb-dev-media/moments/ads/reupload/avatar2-trailer-short.mp4',
+  private assets: string[] = ['https://ewr1.vultrobjects.com/moments/videos/car-parts.mp4',
     'https://s3.us-east-2.amazonaws.com/vb-dev-media/moments/ads/reupload/coca-cola-short.mp4',
-    'Canvas3'];
+    'https://s3.us-east-2.amazonaws.com/vb-dev-media/moments/ads/reupload/coca-cola-banner-right.jpg'];
 
   constructor() {
   }

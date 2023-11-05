@@ -1,10 +1,10 @@
 <div class="canvas-boundary">
   <div *ngFor="let asset of getAssets()" class="canvas-element" cdkDragBoundary=".canvas-boundary" cdkDrag>
-    <div cdkDragHandle style="background: grey; width: 100%; height: 20px; display: flex; justify-content: end; cursor: move">
-      <button (click)="removeAsset(asset)">Delete</button>
+    <div cdkDragHandle
+         style="background: #6880d9; width: 100%; height: 24px; display: flex; justify-content: end; cursor: move">
+      <mat-icon style="color: white; cursor: pointer" (click)="removeAsset(asset)">close</mat-icon>
     </div>
-    <app-canvas-item
-                     [asset]="asset"></app-canvas-item>
+    <app-canvas-item [asset]="asset"></app-canvas-item>
   </div>
 
 </div>

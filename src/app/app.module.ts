@@ -12,6 +12,9 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {CanvasAreaComponent} from './canvas-area/canvas-area.component';
 import {CdkDrag, CdkDragHandle} from "@angular/cdk/drag-drop";
 import { CanvasItemComponent } from './canvas-item/canvas-item.component';
+import {MatIconModule} from "@angular/material/icon";
+import {MatCardModule} from "@angular/material/card";
+import { AssetsControlComponent } from './assets-control/assets-control.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { CanvasItemComponent } from './canvas-item/canvas-item.component';
     HeaderComponent,
     UrlInputFormComponent,
     CanvasAreaComponent,
-    CanvasItemComponent
+    CanvasItemComponent,
+    AssetsControlComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +35,8 @@ import { CanvasItemComponent } from './canvas-item/canvas-item.component';
     MatButtonModule,
     CdkDrag,
     CdkDragHandle,
+    MatIconModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
