@@ -2,7 +2,7 @@
   <video #videoElement *ngIf="isVideoUrl()" width="100%" controls>
     <source [src]="asset" type="video/mp4"/>
   </video>
-  <picture  *ngIf="!isVideoUrl()">
+  <picture *ngIf="!isVideoUrl()">
     <img #imageElement style="width: 100%" [src]="asset" alt="no-image"/>
   </picture>
 </div>
@@ -17,6 +17,7 @@
     <span>Height: {{assetDimensions.height}}</span>
   </div>
 </div>
+
 
 
 

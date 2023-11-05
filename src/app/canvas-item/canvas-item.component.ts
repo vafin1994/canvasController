@@ -76,6 +76,13 @@ export class CanvasItemComponent implements OnInit, OnDestroy, AfterContentCheck
   }
 
   getDimensions() {
+    const elDomRect: DOMRect | undefined = this.getElementDomRect();
+    if(elDomRect){
+      this.assetDimensions = {x: elDomRect.x + window.scrollX, y: elDomRect.y + window.scrollY, width: elDomRect.width, height: elDomRect.height}
+    }
+  }
+
+  public getElementDomRect(): DOMRect | undefined{
     let elDomRect: DOMRect | undefined;
     if(this.videoElement){
       elDomRect = this.videoElement.nativeElement.getBoundingClientRect();
@@ -83,9 +90,7 @@ export class CanvasItemComponent implements OnInit, OnDestroy, AfterContentCheck
     if(this.imageElement){
       elDomRect = this.imageElement.nativeElement.getBoundingClientRect();
     }
-    if(elDomRect){
-      this.assetDimensions = {x: elDomRect.x + window.scrollX, y: elDomRect.y + window.scrollY, width: elDomRect.width, height: elDomRect.height}
-    }
+    return elDomRect;
   }
 
 }
