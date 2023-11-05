@@ -1,0 +1,5 @@
+<form class="urlInputForm">
+  <input [formControl]="assetUrl" matInput placeholder="Paste url here">
+  <button [disabled]="!assetUrl.valid" (click)="addAsset()" mat-button>Add asset</button>
+</form>
+

@@ -1,0 +1,10 @@
+.urlInputForm{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  & input {
+    height: 30px;
+    min-width: 300px;
+  }
+}
